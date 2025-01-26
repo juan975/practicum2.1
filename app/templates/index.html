@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Texto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Clasificador de Texto</h1>
+    <form action="/analyze" method="post">
+        <label for="text">Introduce tu texto:</label><br>
+        <textarea id="text" name="text" rows="5" cols="40"></textarea><br>
+        <button type="submit">Analizar</button>
+    </form>
+</body>
+</html>

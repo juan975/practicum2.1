@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Análisis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Resultado del Análisis</h1>
+    <div class="result">
+        <p><strong>Texto ingresado:</strong> {{ text }}</p>
+        <p class="
+            {% if sentiment == 'Positivo' %}positive{% elif sentiment == 'Negativo' %}negative{% else %}neutral{% endif %}
+        ">
+            <strong>Sentimiento detectado:</strong> {{ sentiment }}
+            {% if sentiment == 'Positivo' %}
+                😊
+            {% elif sentiment == 'Negativo' %}
+                😞
+            {% else %}
+                😐
+            {% endif %}
+        </p>
+        <a href="/">
+            <button style="margin-top: 20px;">Regresar</button>
+        </a>
+    </div>
+</body>
+</html>
